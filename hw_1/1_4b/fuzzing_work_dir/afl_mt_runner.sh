@@ -1,0 +1,4 @@
+screen -dmS fuzzer_1 /bin/bash -c "afl-fuzz -m 1000 -i fuzzer_input -o fuzzer_output -M fuzzer_1 -- ../wsi-to-dicom-converter/build/wsi2dcm --threads 1 --progressiveDownsample @@"
+screen -dmS fuzzer_2 /bin/bash -c "afl-fuzz -m 1000 -i fuzzer_input -o fuzzer_output -S fuzzer_2 -- ../wsi-to-dicom-converter/build/wsi2dcm --threads 1 --progressiveDownsample @@"
+screen -dmS fuzzer_3 /bin/bash -c "afl-fuzz -m 1000 -i fuzzer_input -o fuzzer_output -S fuzzer_3 -- ../wsi-to-dicom-converter/build/wsi2dcm --threads 1 --progressiveDownsample @@"
+screen -dmS fuzzer_4 /bin/bash -c "afl-fuzz -m 1000 -i fuzzer_input -o fuzzer_output -S fuzzer_4 -- ../wsi-to-dicom-converter/build/wsi2dcm --threads 1 --progressiveDownsample @@"
